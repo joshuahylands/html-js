@@ -1,0 +1,13 @@
+{
+  "name": "html-js",
+  "version": "0.1.0",
+  "description": "Write reactive HTML in JavaScript",
+  "scripts": {
+    "start": "node example/server.js"
+  },
+  "author": "Joshua Hylands <https://github.com/joshuahylands>",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.19.2"
+  }
+}

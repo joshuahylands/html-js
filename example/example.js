@@ -1,4 +1,4 @@
-import { button, div, h1, input, li, memo, render, state, ul } from './jshtml.mjs';
+import { button, div, h1, input, li, memo, render, state, ul } from './htmljs.mjs';
 
 const Counter = () => {
     const count = state(0);

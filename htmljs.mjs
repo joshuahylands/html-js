@@ -1,5 +1,5 @@
 'use strict'
-/** @module jshtml */
+/** @module htmljs */
 
 /*
     *****************************

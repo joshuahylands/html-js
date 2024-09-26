@@ -220,6 +220,21 @@ function createNode(arg) {
 }
 
 /**
+ * Sets an attribute on an element.
+ * Attribute values that are strings use element.setAttribute and others are set using their key
+ * @param {HTMLElement} element Element of which the attribute belongs to
+ * @param {string} attributeKey The attribute name
+ * @param {*} attributeValue The attributes value
+ */
+function setAttribute(element, attributeKey, attributeValue) {
+    if (typeof attributeValue == 'string') {
+        element.setAttribute(attributeKey, attributeValue);
+    } else {
+        element[attributeKey] = attributeValue;
+    }
+}
+
+/**
  * Creates a html element with the attributes and children specified
  * @example
  * // Usage
@@ -256,11 +271,11 @@ export function html(tag, ...args) {
 
         if (attributeValue instanceof State) {
             attributeValue.bind((newValue) => {
-                element[attributeKey] = newValue;
+                setAttribute(element, attributeKey, newValue);
             });
         }
 
-        element[attributeKey] = attributeValue;
+        setAttribute(element, attributeKey, attributeValue);
     }
 
     let children = childrenConstructor();
@@ -357,6 +372,11 @@ export const figure = generateHTMLExport('figure');
 export const footer = generateHTMLExport('footer');
 export const form = generateHTMLExport('form');
 export const h1 = generateHTMLExport('h1');
+export const h2 = generateHTMLExport('h2');
+export const h3 = generateHTMLExport('h3');
+export const h4 = generateHTMLExport('h4');
+export const h5 = generateHTMLExport('h5');
+export const h6 = generateHTMLExport('h6');
 export const head = generateHTMLExport('head');
 export const header = generateHTMLExport('header');
 export const hgroup = generateHTMLExport('hgroup');

@@ -2,12 +2,16 @@
   "name": "html-js",
   "version": "0.1.0",
   "description": "Write reactive HTML in JavaScript",
+  "type": "module",
   "scripts": {
-    "start": "node example/server.js"
+    "start": "npm run build-docs && npm run start-server",
+    "build-docs": "jsdoc -c jsdoc/jsdoc.json",
+    "start-server": "node docs/server.js"
   },
   "author": "Joshua Hylands <https://github.com/joshuahylands>",
   "license": "MIT",
   "devDependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.0",
+    "jsdoc": "^4.0.3"
   }
 }

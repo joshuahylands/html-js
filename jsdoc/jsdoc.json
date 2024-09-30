@@ -1,0 +1,14 @@
+{
+    "source": {
+        "include": [ "htmljs.mjs" ],
+        "includePattern": ".+\\.(js(doc|x)?|mjs)$"
+    },
+    "templates": {
+        "default": {
+            "layoutFile": "jsdoc/custom-layout.tmpl"
+        }
+    },
+    "opts": {
+        "destination": "./docs/jsdoc"
+    }
+}

@@ -1,5 +1,4 @@
 'use strict'
-/** @module htmljs */
 
 /*
     *****************************
@@ -141,10 +140,14 @@ export function rerender(component, arg0, arg1, arg2) {
     ************************
 */
 
-/** Global stylesheet */
+/**
+ * @ignore
+ * Global stylesheet
+ */
 let stylesheet = null;
 
 /**
+ * @ignore
  * Returns the global stylesheet
  * @returns {HTMLStyleElement}
  */
@@ -193,12 +196,14 @@ export function styled(component, styles) {
 */
 
 /**
+ * @ignore
  * Valid types of primitives that createNode can accept
  * @constant {string[]}
  */
 const CREATE_NODE_ACCEPTED_PRIMITIVE_TYPES = ['string', 'number', 'bigint', 'boolean'];
 
 /**
+ * @ignore
  * Creates a valid HTML Node from an argument
  * @param {*} arg 
  * @returns {Node | null}
@@ -220,6 +225,7 @@ function createNode(arg) {
 }
 
 /**
+ * @ignore
  * Sets an attribute on an element.
  * Attribute values that are strings use element.setAttribute and others are set using their key
  * @param {HTMLElement} element Element of which the attribute belongs to
@@ -322,6 +328,7 @@ export function component(constructor) {
 }
 
 /**
+ * @ignore
  * Generate functions for all HTML5 tags as shorthand for the html function
  * Excludes `html` and `var`. Use the html function for these
  * @param {string} tag 

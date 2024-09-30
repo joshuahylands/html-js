@@ -2,7 +2,7 @@
 
 Write reactive HTML in JavaScript
 
-## Example
+## Documentation
 
 Run:
 ```sh

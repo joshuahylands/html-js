@@ -296,6 +296,25 @@ export function html(tag, ...args) {
 }
 
 /**
+ * Creates a document fragment
+ * @param {Function} childrenConstructor Function that returns the fragments children
+ * @returns {DocumentFragment}
+ */
+export function fragment(childrenConstructor) {
+    let fragmentNode = document.createDocumentFragment();
+
+    let children = childrenConstructor();
+
+    if (!(children instanceof Array)) {
+        children = [children];
+    }
+
+    fragmentNode.replaceChildren(...children.map(createNode));
+
+    return fragmentNode;
+}
+
+/**
  * Renders a component onto the DOM
  * @param {Function} component A function which returns a HTML Element
  * @param {string} root A HTML selector
